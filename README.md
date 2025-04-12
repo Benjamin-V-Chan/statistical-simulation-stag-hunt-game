@@ -21,3 +21,39 @@ project-root/
     ├── 03_visualization.py
     └── 04_parameter_experiment.py
 ```
+
+## Usage
+
+### 1. Setup the Project:
+
+Clone the repository.  
+Ensure you have Python installed.  
+Install required dependencies using the requirements.txt file:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run the main simulation:
+```bash
+python scripts/01_staghunt_simulation.py
+```
+Generates: `outputs/simulation_results.csv`
+
+### 3. Analyze the statistics:
+```bash
+python scripts/02_statistical_analysis.py
+```
+Generates: `outputs/statistical_summary.csv`
+
+### 4. Visualize simulation results:
+```bash
+python scripts/03_visualization.py
+```
+Generates plots in `outputs/`
+
+### 5. Run parameter sweep experiments:
+```bash
+python scripts/04_parameter_experiment.py
+```
+Generates: `outputs/parameter_experiment_results.csv`
