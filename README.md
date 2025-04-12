@@ -57,3 +57,15 @@ Generates plots in `outputs/`
 python scripts/04_parameter_experiment.py
 ```
 Generates: `outputs/parameter_experiment_results.csv`
+
+## Requirements
+
+Install all required Python packages with:
+```bash
+pip install -r requirements.txt
+```
+
+Required packages:
+- numpy
+- pandas
+- matplotlib
