@@ -1,7 +1,14 @@
-# Import necessary modules (pandas, os).
-# Define the path to the simulation CSV file (outputs/simulation_results.csv).
-# Read the CSV into a pandas DataFrame.
-# Compute descriptive statistics (mean, std, min, max) for the columns "fraction_stag" and "avg_payoff".
-# Create a summary DataFrame with these statistics.
-# Save the summary statistics to a new CSV file (e.g., outputs/statistical_summary.csv).
-# Print the summary statistics.
+import os
+import pandas as pd
+
+def main():
+    input_file = os.path.join("..", "outputs", "simulation_results.csv")
+    df = pd.read_csv(input_file)
+    summary = df[["fraction_stag", "avg_payoff"]].describe()
+    output_file = os.path.join("..", "outputs", "statistical_summary.csv")
+    summary.to_csv(output_file)
+    print("Statistical summary:")
+    print(summary)
+
+if __name__ == "__main__":
+    main()
